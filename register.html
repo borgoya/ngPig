@@ -1,0 +1,49 @@
+<div class="panel panel-default" ng-controller = "registerCtrl">
+    <div class="panel-heading">
+     <h3 class="panel-title">Register</h3>
+    </div>
+    <div class="panel-body">
+     <form method="post" name="regform">
+      
+      <div class="form-group">
+       <label>Enter Your Email</label>
+       <input type="text" name="email" ng-model="registerData.username" class="form-control" />
+      </div>
+
+      <div class="form-group">
+       <label>Enter Your Password</label>
+       <input type="password" name="password" ng-model="registerData.password" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label>Enter Your First Name</label>
+        <input type="text" name="firstname" ng-model="registerData.firstname" class="form-control" />
+       </div>
+
+       <div class="form-group">
+        <label>Enter Your Lastname</label>
+        <input type="text" name="lastname" ng-model="registerData.lastname" class="form-control" />
+       </div>
+
+       <div class="form-group">
+        <label>Enter Your Adress</label>
+        <input type="text" name="address" ng-model="registerData.address" class="form-control" />
+       </div>
+
+      <div class="form-group" align="center">
+        <button type="button" id="loginbutton" class="btn btn-lg btn-primary btn-block"
+        ng-disabled="regform.$invalid" ng-click="submitRegister(registerData)">
+            <span class="glyphicon glyphicon-log-in"></span> 
+            <span id="regtext">Register</span></button>
+				
+       <br />
+    </div>
+     </form>
+    </div>
+
+    <div class="alert alert-danger text-center" ng-show="errorReg">
+      <button type="button" class="close" ng-click="clearMsg()"><span aria-hidden="true">&times;</span></button>
+      {{ errorMsg }}
+  </div>
+   </div>
+

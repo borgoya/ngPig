@@ -1,0 +1,24 @@
+
+<div class="container" ng-controller="homeCtrl" ng-init="select()"> 
+<a ui-sref="logout" class="btn btn-danger" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+<h2>Welcome to Homepage </h2>
+		<h4>User Info:</h4>
+		<p>Firstname: {{ user.firstname }}</p>
+		<p>Lastname: {{ user.lastname }}</p>
+		<p>Address: {{ user.address }}</p>
+		<p>Username: {{ user.username }}</p>
+		
+</div>
+<div class="container" ng-controller="myController" ng-init="select()"> 
+	 <div class="col-md-4">  
+		  <input type="file" file-input="files" />  
+	 </div>  
+	 <div class="col-md-6">  
+		  <button class="btn btn-info" ng-click="uploadFile()">Upload</button>  
+	 </div>  
+	 <div style="clear:both"></div>  
+	 <br /><br />  
+	 <div class="col-md-3" ng-repeat="image in images track by $index">  
+		  <img ng-src="upload/{{image.name}}" width="200" height="200" style="padding:16px; border:1px solid #f1f1f1; margin:16px;" />  
+	 </div>  
+</div>  
