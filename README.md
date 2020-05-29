@@ -1,2 +1,2 @@
 # ngPig
-A Photo Library based on AngularJS 1.x
+A Photo Library based on AngularJS and PHP
